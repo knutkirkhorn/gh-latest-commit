@@ -1,0 +1,30 @@
+{
+  "name": "gh-latest-commit",
+  "version": "1.0.0",
+  "description": "Get a users latest GitHub commit",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Knutakir/gh-latest-commit.git"
+  },
+  "keywords": [
+    "github",
+    "latest",
+    "commit"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Knutakir/gh-latest-commit/issues"
+  },
+  "homepage": "https://github.com/Knutakir/gh-latest-commit#readme",
+  "dependencies": {
+    "got": "^9.6.0"
+  },
+  "devDependencies": {
+    "ava": "^2.1.0"
+  }
+}
