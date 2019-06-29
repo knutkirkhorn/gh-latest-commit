@@ -8,7 +8,7 @@ $ npm install gh-latest-commit
 
 ## Usage
 ```js
-const ghLatestCommit = require('./gh-latest-commit');
+const ghLatestCommit = require('gh-latest-commit');
 
 ghLatestCommit('knutakir').then(commit => {
     console.log(commit);
