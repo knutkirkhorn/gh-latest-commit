@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/Knutakir/gh-latest-commit#readme",
   "dependencies": {
-    "got": "^9.6.0"
+    "got": "^9.6.0",
+    "isemail": "^3.2.0"
   },
   "devDependencies": {
     "ava": "^2.1.0"
