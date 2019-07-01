@@ -7,7 +7,7 @@ module.exports = (username, email) => {
     }
 
     if (email && !isemail.validate(email)) {
-        throw TypeError('`email` should be a email address');
+        throw TypeError('`email` should be an email address');
     }
 
     return new Promise((resolve, reject) => {
