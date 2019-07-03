@@ -53,7 +53,7 @@ test('returns latest commit', async t => {
         .reply(200, [
             exampleCommit
         ]);
-        
+
     try {
         const commit = await m('knutakir');
         t.is(typeof commit, 'object');
