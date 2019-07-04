@@ -3,11 +3,11 @@ const isemail = require('isemail');
 
 module.exports = (username, email) => {
     if (email && typeof email !== 'string') {
-        throw TypeError('`email` should be of type `string`');
+        throw new TypeError('`email` should be of type `string`');
     }
 
     if (email && !isemail.validate(email)) {
-        throw TypeError('`email` should be an email address');
+        throw new TypeError('`email` should be an email address');
     }
 
     return new Promise((resolve, reject) => {

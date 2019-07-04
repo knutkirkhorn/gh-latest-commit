@@ -1,6 +1,6 @@
 import test from 'ava';
 import nock from 'nock';
-import m from '.';
+import ghLatestCommit from '.';
 
 const exampleCommit = {
     id: '9927771437',
@@ -55,9 +55,9 @@ test('returns latest commit', async t => {
         ]);
 
     try {
-        const commit = await m('knutakir');
+        const commit = await ghLatestCommit('knutakir');
         t.is(typeof commit, 'object');
-    } catch (e) {
+    } catch {
         t.fail();
     }
 });
@@ -70,9 +70,9 @@ test('returns latest commit with given email', async t => {
         ]);
 
     try {
-        const commit = await m('knutakir', 'knutkirk@hotmail.com');
+        const commit = await ghLatestCommit('knutakir', 'knutkirk@hotmail.com');
         t.is(typeof commit, 'object');
-    } catch (e) {
+    } catch {
         t.fail();
     }
 });
@@ -81,10 +81,10 @@ test('throws when provided a non string email', async t => {
     const expectedValue = '`email` should be of type `string`';
 
     try {
-        await m('knutakir', 1337);
-    } catch (e) {
-        t.is(e.message, expectedValue);
-        t.true(e instanceof TypeError);
+        await ghLatestCommit('knutakir', 1337);
+    } catch (error) {
+        t.is(error.message, expectedValue);
+        t.true(error instanceof TypeError);
     }
 });
 
@@ -92,9 +92,9 @@ test('throws when provided an invalid email address', async t => {
     const expectedValue = '`email` should be an email address';
 
     try {
-        await m('knutakir', 'invalid-email');
-    } catch (e) {
-        t.is(e.message, expectedValue);
-        t.true(e instanceof TypeError);
+        await ghLatestCommit('knutakir', 'invalid-email');
+    } catch (error) {
+        t.is(error.message, expectedValue);
+        t.true(error instanceof TypeError);
     }
 });
