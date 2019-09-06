@@ -23,7 +23,7 @@ ghLatestCommit('knutakir', 'knutkirk@hotmail.com').then(commit => {
 ```
 
 ## API
-### ghLatestCommit(username, email)
+### ghLatestCommit(username, [email])
 Returns the usernames latest GitHub commit. The author email of the commit needs to match if the email is set.
 
 ## License
