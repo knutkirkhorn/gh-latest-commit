@@ -1,6 +1,6 @@
-import test from 'ava';
-import nock from 'nock';
-import ghLatestCommit from '.';
+const test = require('ava');
+const nock = require('nock');
+const ghLatestCommit = require('.');
 
 const exampleCommit = {
     id: '9927771437',
