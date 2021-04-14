@@ -22,7 +22,7 @@ const exampleCommit = {
         push_id: 3771517766,
         size: 1,
         distinct_size: 1,
-        ref: 'refs/heads/master',
+        ref: 'refs/heads/main',
         head: 'b0e6e77d81766eb680b9bbeff47a6db932d24811',
         before: 'f1e8c8f06c75dc74871ed47f4ae8126990680e45',
         commits: [

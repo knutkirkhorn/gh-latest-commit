@@ -1,4 +1,4 @@
-# gh-latest-commit [![Build Status](https://travis-ci.org/Knutakir/gh-latest-commit.svg?branch=master)](https://travis-ci.org/Knutakir/gh-latest-commit)
+# gh-latest-commit [![Build Status](https://travis-ci.org/Knutakir/gh-latest-commit.svg?branch=main)](https://travis-ci.org/Knutakir/gh-latest-commit)
 > :octocat: Get a users latest GitHub commit
 
 ## Installation
