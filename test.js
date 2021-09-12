@@ -7,16 +7,16 @@ const exampleCommit = {
     type: 'PushEvent',
     actor: {
         id: 14054353,
-        login: 'Knutakir',
-        display_login: 'Knutakir',
+        login: 'knutkirkhorn',
+        display_login: 'knutkirkhorn',
         gravatar_id: '',
-        url: 'https://api.github.com/users/Knutakir',
+        url: 'https://api.github.com/users/knutkirkhorn',
         avatar_url: 'https://avatars.githubusercontent.com/u/14054353?'
     },
     repo: {
         id: 194443339,
-        name: 'Knutakir/gh-latest-commit',
-        url: 'https://api.github.com/repos/Knutakir/gh-latest-commit'
+        name: 'knutkirkhorn/gh-latest-commit',
+        url: 'https://api.github.com/repos/knutkirkhorn/gh-latest-commit'
     },
     payload: {
         push_id: 3771517766,
@@ -34,7 +34,7 @@ const exampleCommit = {
                 },
                 message: 'Fix typo and check error type',
                 distinct: true,
-                url: 'https://api.github.com/repos/Knutakir/gh-latest-commit/commits/b0e6e77d81766eb680b9bbeff47a6db932d24811'
+                url: 'https://api.github.com/repos/knutkirkhorn/gh-latest-commit/commits/b0e6e77d81766eb680b9bbeff47a6db932d24811'
             }
         ]
     },
@@ -49,13 +49,13 @@ test.after(() => {
 
 test('returns latest commit', async t => {
     nock('https://api.github.com')
-        .get('/users/knutakir/events/public')
+        .get('/users/knutkirkhorn/events/public')
         .reply(200, [
             exampleCommit
         ]);
 
     try {
-        const commit = await ghLatestCommit('knutakir');
+        const commit = await ghLatestCommit('knutkirkhorn');
         t.is(typeof commit, 'object');
     } catch {
         t.fail();
@@ -64,13 +64,13 @@ test('returns latest commit', async t => {
 
 test('returns latest commit with given email', async t => {
     nock('https://api.github.com')
-        .get('/users/knutakir/events/public')
+        .get('/users/knutkirkhorn/events/public')
         .reply(200, [
             exampleCommit
         ]);
 
     try {
-        const commit = await ghLatestCommit('knutakir', 'knutkirk@hotmail.com');
+        const commit = await ghLatestCommit('knutkirkhorn', 'knutkirk@hotmail.com');
         t.is(typeof commit, 'object');
     } catch {
         t.fail();
@@ -81,7 +81,7 @@ test('throws when provided a non string email', async t => {
     const expectedValue = '`email` should be of type `string`';
 
     try {
-        await ghLatestCommit('knutakir', 1337);
+        await ghLatestCommit('knutkirkhorn', 1337);
     } catch (error) {
         t.is(error.message, expectedValue);
         t.true(error instanceof TypeError);
@@ -92,7 +92,7 @@ test('throws when provided an invalid email address', async t => {
     const expectedValue = '`email` should be an email address';
 
     try {
-        await ghLatestCommit('knutakir', 'invalid-email');
+        await ghLatestCommit('knutkirkhorn', 'invalid-email');
     } catch (error) {
         t.is(error.message, expectedValue);
         t.true(error instanceof TypeError);

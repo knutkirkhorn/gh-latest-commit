@@ -1,4 +1,4 @@
-# gh-latest-commit [![Build Status](https://travis-ci.org/Knutakir/gh-latest-commit.svg?branch=main)](https://travis-ci.org/Knutakir/gh-latest-commit)
+# gh-latest-commit [![Build Status](https://travis-ci.org/knutkirkhorn/gh-latest-commit.svg?branch=main)](https://travis-ci.org/knutkirkhorn/gh-latest-commit)
 > :octocat: Get a users latest GitHub commit
 
 ## Installation
@@ -10,13 +10,13 @@ $ npm install gh-latest-commit
 ```js
 const ghLatestCommit = require('gh-latest-commit');
 
-ghLatestCommit('knutakir').then(commit => {
+ghLatestCommit('knutkirkhorn').then(commit => {
     console.log(commit);
     // => { message: ..., url: ..., time: ... }
 });
 
 // Check if the commit is authored with the given email
-ghLatestCommit('knutakir', 'knutkirk@hotmail.com').then(commit => {
+ghLatestCommit('knutkirkhorn', 'knutkirk@hotmail.com').then(commit => {
     console.log(commit);
     // => { message: ..., url: ..., time: ... }
 });
