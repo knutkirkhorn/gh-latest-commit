@@ -1,12 +1,15 @@
 # gh-latest-commit
+
 > :octocat: Get a users latest GitHub commit
 
 ## Installation
+
 ```
 $ npm install gh-latest-commit
 ```
 
 ## Usage
+
 ```js
 const ghLatestCommit = require('gh-latest-commit');
 
@@ -23,8 +26,7 @@ ghLatestCommit('knutkirkhorn', 'knutkirk@hotmail.com').then(commit => {
 ```
 
 ## API
-### ghLatestCommit(username, [email])
-Returns the usernames latest GitHub commit. The author email of the commit needs to match if the email is set.
 
-## License
-MIT © [Knut Kirkhorn](LICENSE)
+### ghLatestCommit(username, [email])
+
+Returns the usernames latest GitHub commit. The author email of the commit needs to match if the email is set.
