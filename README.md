@@ -5,24 +5,20 @@
 ## Installation
 
 ```
-$ npm install gh-latest-commit
+npm install gh-latest-commit
 ```
 
 ## Usage
 
 ```js
-const ghLatestCommit = require('gh-latest-commit');
+import ghLatestCommit from 'gh-latest-commit';
 
-ghLatestCommit('knutkirkhorn').then(commit => {
-    console.log(commit);
-    // => { message: ..., url: ..., time: ... }
-});
+console.log(await ghLatestCommit('knutkirkhorn'));
+// => { message: ..., url: ..., time: ... }
 
 // Check if the commit is authored with the given email
-ghLatestCommit('knutkirkhorn', 'knutkirk@hotmail.com').then(commit => {
-    console.log(commit);
-    // => { message: ..., url: ..., time: ... }
-});
+console.log(await ghLatestCommit('knutkirkhorn', 'knutkirk@hotmail.com'));
+// => { message: ..., url: ..., time: ... }
 ```
 
 ## API

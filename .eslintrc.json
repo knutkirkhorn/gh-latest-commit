@@ -6,36 +6,31 @@
     },
     "extends": [
         "eslint:recommended",
-        "airbnb-base",
-        "plugin:ava/recommended"
+		"airbnb-base",
+		"plugin:ava/recommended",
+		"plugin:import/recommended",
+		"plugin:unicorn/recommended"
     ],
     "parserOptions": {
-        "ecmaVersion": 2019,
+        "ecmaVersion": 2023,
         "sourceType": "module"
     },
     "rules": {
-        "indent": [
-            "error",
-            4
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ],
-        "linebreak-style": "off",
+        "indent": ["error", "tab", {"SwitchCase": 1}],
+		"no-tabs": "off",
+		"quotes": ["error", "single"],
+		"semi": ["error", "always"],
+		"linebreak-style": "off",
         "object-curly-spacing": "off",
         "eol-last": "off",
         "comma-dangle": "off",
         "arrow-parens": "off",
         "no-plusplus": "off",
         "strict": "off",
-        "import/newline-after-import": "off",
         "no-param-reassign": "off",
         "no-useless-return": "off",
-        "max-len": "off"
+        "max-len": "off",
+		"import/newline-after-import": "off",
+		"import/extensions": ["error", "always"]
     }
 }

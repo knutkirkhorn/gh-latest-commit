@@ -1,40 +1,48 @@
 {
-  "name": "gh-latest-commit",
-  "version": "1.1.2",
-  "description": "Get a users latest GitHub commit",
-  "main": "index.js",
-  "scripts": {
-    "test": "ava",
-    "lint": "eslint ."
-  },
-  "files": [
-    "index.js"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/knutkirkhorn/gh-latest-commit.git"
-  },
-  "keywords": [
-    "github",
-    "latest",
-    "commit"
-  ],
-  "author": "Knut Kirkhorn",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/knutkirkhorn/gh-latest-commit/issues"
-  },
-  "homepage": "https://github.com/knutkirkhorn/gh-latest-commit#readme",
-  "dependencies": {
-    "got": "^11.8.1",
-    "isemail": "^3.2.0"
-  },
-  "devDependencies": {
-    "ava": "^3.15.0",
-    "eslint": "^7.26.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-ava": "^11.0.0",
-    "eslint-plugin-import": "^2.22.1",
-    "nock": "^13.0.11"
-  }
+	"name": "gh-latest-commit",
+	"version": "1.1.2",
+	"description": "Get a users latest GitHub commit",
+	"scripts": {
+		"test": "ava",
+		"lint": "eslint ."
+	},
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/knutkirkhorn/gh-latest-commit.git"
+	},
+	"keywords": [
+		"github",
+		"latest",
+		"commit"
+	],
+	"author": "Knut Kirkhorn",
+	"type": "module",
+	"exports": "./index.js",
+	"types": "./index.d.ts",
+	"engines": {
+		"node": ">=14.16"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/knutkirkhorn/gh-latest-commit/issues"
+	},
+	"homepage": "https://github.com/knutkirkhorn/gh-latest-commit#readme",
+	"dependencies": {
+		"got": "^12.5.3",
+		"isemail": "^3.2.0"
+	},
+	"devDependencies": {
+		"ava": "^5.2.0",
+		"eslint": "^8.34.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-plugin-ava": "^14.0.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-unicorn": "^45.0.2",
+		"nock": "^13.3.0",
+		"tsd": "^0.25.0"
+	}
 }
